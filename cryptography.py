@@ -23,5 +23,10 @@ if command =="e":
         message[x]=associations.find(message[x])
     for x in range(0, len(key)):
         key[x]=associations.find(key[x])
-    if len(key)<len(message)
+    while len(key)<len(message):
+        key.extend(key)
+    for x in range(0, len(message)):
+        print(key+message)
+        
+        
     
