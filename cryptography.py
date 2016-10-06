@@ -19,6 +19,7 @@ if command== "q":
 if command =="e":
     message=list(input("Message: "))
     key= list(input("Key: "))
+    added=[x+y for x,y in zip(message, key)]
     for x in range(0, len(message)):
         message[x]=associations.find(message[x])
     for x in range(0, len(key)):
@@ -26,7 +27,4 @@ if command =="e":
     while len(key)<len(message):
         key.extend(key)
     for x in range(0, len(message)):
-        print(key+message)
-        
-        
-    
+        print(added[x], end=" ")
