@@ -36,4 +36,6 @@ while command=="d":
     print("Message: "+associations1[added[x]])
     print("Key: "+key1)
     print(message1)
+    command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    
     
