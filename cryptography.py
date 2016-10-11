@@ -32,6 +32,7 @@ while command =="e":
     for x in range(0, len(message)):
         bob=associations1[added[x]]
         print(bob,end="")
+    print( )
     command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
 while command=="d":
     message1=input("Message: ")
@@ -44,12 +45,11 @@ while command=="d":
         key[x]=associations.find(key[x])
     while len(key)<len(message):
         key.extend(key)
-    added=[x+y for x,y in zip(message, key)]
+    added=[x-y for x,y in zip(message, key)]
     for x in range(0, len(message)):
         bob=associations1[added[x]]
-    print("Message: "+bob)
-    print("Key: "+key1)
-    print(message1)
+        print(bob,end="")
+    print( )
     command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     
     
